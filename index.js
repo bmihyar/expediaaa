@@ -20,7 +20,7 @@ https.get(options, function (res) {
             try {
                 var data = JSON.parse(json);
                 // data is available here:
-                console.log(data.offers.Hotel[0].hotelInfo.hotelName);
+                console.log("hOttellllll name: " + data.offers.Hotel[0].hotelInfo.hotelName);
             } catch (e) {
                 console.log('Error parsing JSON!');
             }
