@@ -15,17 +15,17 @@
 <div id="hotels">
 	<div class="hotell">
 		<div id="hotel-image" class="left">
-			<img src="<%= data.offers.Hotel[0].hotelInfo.hotelImageUrl %>" >
+			<img src="<%= hotel.hotelInfo.hotelImageUrl %>" >
 		</div>
 		<div id="hotel-address" class="middle">
-			<span style="color:#0065b8"><%= data.offers.Hotel[0].hotelInfo.hotelName %></span><br>
-			<span><%= data.offers.Hotel[0].hotelInfo.hotelCity %></span><br>
-			<span><%= data.offers.Hotel[0].hotelInfo.hotelStreetAddress %></span>
+			<span style="color:#0065b8"><%= hotel.hotelInfo.hotelName %></span><br>
+			<span><%= hotel.hotelInfo.hotelCity %></span><br>
+			<span><%= hotel.hotelInfo.hotelStreetAddress %></span>
 		</div>
 		<div id="hotel-offer" class="right">
-		<span style="text-decoration: line-through"><%= data.offers.Hotel[0].hotelPricingInfo.crossOutPriceValue %></span> <span id="deal"><%= data.offers.Hotel[0].hotelPricingInfo.averagePriceValue %></span>
+		<span style="text-decoration: line-through"><%= hotel.hotelPricingInfo.crossOutPriceValue %></span> <span id="deal"><%= hotel.hotelPricingInfo.averagePriceValue %></span>
 		<br>
-		<span>You save <%= data.offers.Hotel[0].hotelPricingInfo.percentSavings %></span>
+		<span>You save <%= hotel.hotelPricingInfo.percentSavings %></span>
 		</div>
 	</div>
 </div>
