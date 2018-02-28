@@ -11,15 +11,15 @@
 <div id="hotels">
 	<div class="hotell">
 		<div id="hotel-image" class="left">
-			<img src="https://images.trvl-media.com/hotels/11000000/10990000/10980200/10980182/10980182_143_t.jpg" >
+			<img src="<%= data.offers.Hotel[0].hotelInfo.hotelImageUrl %>" >
 		</div>
 		<div id="hotel-address" class="middle">
-			<span style="color:#0065b8">Ocean Reserve OceanView Sunny Isles Luxury Condos</span><br>
-			<span>hotelCity: <%= data.offers.Hotel[0].hotelInfo.hotelCity %></span><br>
-			<span>19370-19390 Collins Avenue</span>
+			<span style="color:#0065b8"><%= data.offers.Hotel[0].hotelInfo.hotelName %></span><br>
+			<span><%= data.offers.Hotel[0].hotelInfo.hotelCity %></span><br>
+			<span><%= data.offers.Hotel[0].hotelInfo.hotelStreetAddress %></span>
 		</div>
 		<div id="hotel-offer" class="right">
-		<span style="text-decoration: line-through">783.13</span> <span id="deal">186.88 Avg/night</span>
+		<span style="text-decoration: line-through">783.13</span> <span id="deal"><%= data.offers.Hotel[0].hotelPricingInfo.averagePriceValue %></span>
 		</div>
 	</div>
 </div>
