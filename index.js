@@ -37,5 +37,8 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res, data) => res.render('pages/index', {data}))
+  .get('/', (req, res, data) => {
+	  console.log("+++++++++++++ name: " + data.offers.Hotel[0].hotelInfo.hotelName);
+	  res.render('pages/index', {data});
+	  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
