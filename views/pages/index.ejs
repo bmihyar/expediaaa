@@ -19,7 +19,9 @@
 			<span><%= data.offers.Hotel[0].hotelInfo.hotelStreetAddress %></span>
 		</div>
 		<div id="hotel-offer" class="right">
-		<span style="text-decoration: line-through">783.13</span> <span id="deal"><%= data.offers.Hotel[0].hotelPricingInfo.averagePriceValue %></span>
+		<span style="text-decoration: line-through"><%= data.offers.Hotel[0].hotelPricingInfo.crossOutPriceValue %></span> <span id="deal"><%= data.offers.Hotel[0].hotelPricingInfo.averagePriceValue %></span>
+		<br>
+		<span>You save <%= data.offers.Hotel[0].hotelPricingInfo.percentSavings %></span>
 		</div>
 	</div>
 </div>
