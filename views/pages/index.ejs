@@ -8,6 +8,10 @@
 
   <% include ../partials/nav.ejs %>
 
+  <% 
+  const hotels = data.offers.Hotel;
+  hotels.forEach(function(hotel){
+  %>
 <div id="hotels">
 	<div class="hotell">
 		<div id="hotel-image" class="left">
@@ -25,7 +29,9 @@
 		</div>
 	</div>
 </div>
-
+  <%  
+  })
+  %>
 
 </body>
 </html>
