@@ -37,7 +37,7 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res, data) => {
+  .get('/', (req, res) => {
 	  console.log("+++++++++++++ name: " + data);
 	  res.render('pages/index', {data});
 	  })
