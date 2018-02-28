@@ -38,7 +38,7 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => {
-	  console.log("+++++++++++++ name: " + data);
+	  console.log("+++++++++++++ name: " + req.param('destinationCity'));
 	  res.render('pages/index', {data});
 	  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
