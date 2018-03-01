@@ -17,18 +17,18 @@ express()
 		apis_url += "&destinationCity=" + req.params.destinationCity;
 
 	request.get({ url: apis_url }, function(error, response, body) { 
-		//if (!error && response.statusCode == 200) { 
+		if (!error && response.statusCode == 200) { 
 			try {
 				data = JSON.parse(body);
 				console.log("hOttellllll name: " + data.offers.Hotel[0].hotelInfo.hotelName);
+				res.render('pages/index', {data});
 			} catch (e) {
 				console.log('Error parsing JSON!');
 			}
-		//} else {
+		} else {
 			//console.log('statusCode is not 200 !' + error);
-		//}
+		}
     }); 
-	console.log("lolololo name: " + data);  
-	res.render('pages/index', {data});
+	
 	})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
