@@ -1,5 +1,5 @@
 const express = require('express')
-const https = require('https');
+const request = require('request');
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
@@ -10,7 +10,7 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => {
-	console.log("+++++++++++++ name: " + req.param('destinationCity'));
+	console.log("+++++++++++++ name: " + req.param.destinationCity);
 	let  apis_url = "https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel";
 	if(req.param('destinationCity'))
 		apis_url += "&destinationCity=" + req.param('destinationCity');
