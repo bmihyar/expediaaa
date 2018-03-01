@@ -4,7 +4,7 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 
 
-let data = "";
+var data = "";
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -27,7 +27,7 @@ express()
 			console.log('statusCode is not 200 !' + error);
 		}
     }); 
-	  
+	console.log("lolololol name: " + data.offers.Hotel[0].hotelInfo.hotelName);  
 	res.render('pages/index', {data});
 	})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
