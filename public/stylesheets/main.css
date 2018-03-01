@@ -19,7 +19,7 @@
 		 display: inline;
 	 }
 	 .hotell {
-		back-ground: lightyellow;
+		background-color: lightyellow;
 		margin: 10px;
 		overflow: hidden;	
 	 }
@@ -29,3 +29,6 @@
 	 #hotels {
 		width: 60%;
 	 }
+	div#search-div div{
+	display : inline-block;
+	}

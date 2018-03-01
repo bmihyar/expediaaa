@@ -5,9 +5,6 @@
 </head>
 
 <body>
-
-  <% include ../partials/form.ejs %>
-
   <% 
   const hotels = data.offers.Hotel;
   hotels.forEach(function(hotel){
@@ -32,6 +29,6 @@
   <%  
   })
   %>
-
+ <% include ../partials/form.ejs %>
 </body>
 </html>
