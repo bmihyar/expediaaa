@@ -4,7 +4,7 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 
 
-
+const data = "";
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -18,7 +18,7 @@ express()
 	request.get({ url: apis_url }, (error, response, body) => { 
 		if (!error && response.statusCode == 200) { 
 			try {
-				const data = JSON.parse(body);
+				data = JSON.parse(body);
 				console.log("hOttellllll name: " + data.offers.Hotel[0].hotelInfo.hotelName);
 			} catch (e) {
 				console.log('Error parsing JSON!');
