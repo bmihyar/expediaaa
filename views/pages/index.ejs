@@ -20,7 +20,7 @@
 			<span><%= hotel.hotelInfo.hotelStreetAddress %></span>
 		</div>
 		<div id="hotel-offer" class="right">
-		<span style="text-decoration: line-through; color:red"><%= hotel.hotelPricingInfo.crossOutPriceValue hotel.hotelPricingInfo.currency %></span> <span id="deal"><%= hotel.hotelPricingInfo.averagePriceValue %></span>
+		<span style="text-decoration: line-through; color:red"><%= hotel.hotelPricingInfo.crossOutPriceValue%> <%= hotel.hotelPricingInfo.currency %></span> <span id="deal"><%= hotel.hotelPricingInfo.averagePriceValue %> <%= hotel.hotelPricingInfo.currency %></span>
 		<br>
 		<span>You save <%= hotel.hotelPricingInfo.percentSavings %> %</span>
 		</div>
