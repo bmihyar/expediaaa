@@ -13,8 +13,8 @@ express()
 	var data;
 	console.log("+++++++++++++ name: " + req.params.destinationCity);
 	let  apis_url = "https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel";
-	if(req.params.destinationCity)
-		apis_url += "&destinationCity=" + req.params.destinationCity;
+	if(req.query.destinationCity)
+		apis_url += "&destinationCity=" + req.query.destinationCity;
 
 	request.get({ url: apis_url }, function(error, response, body) { 
 		if (!error && response.statusCode == 200) { 
