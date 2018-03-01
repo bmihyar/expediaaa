@@ -28,6 +28,7 @@ express()
 		}
     }); 
 	console.log("lolololo name: " + data.offers.Hotel[0].hotelInfo.hotelName);  
-	res.render('pages/index', {data});
+	//res.render('pages/index', {data});
+	res.render('pages/index');
 	})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
