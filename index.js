@@ -10,10 +10,10 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => {
-	console.log("+++++++++++++ name: " + req.param.destinationCity);
+	console.log("+++++++++++++ name: " + req.params.destinationCity);
 	let  apis_url = "https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel";
 	if(req.param('destinationCity'))
-		apis_url += "&destinationCity=" + req.param('destinationCity');
+		apis_url += "&destinationCity=" + req.params.destinationCity;
 	  
 	request.get({ url: apis_url }, (error, response, body) => { 
 		if (!error && response.statusCode == 200) { 
