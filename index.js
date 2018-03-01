@@ -27,7 +27,7 @@ express()
 			console.log('statusCode is not 200 !' + error);
 		}
     }); 
-	console.log("lolololol name: " + data.offers.Hotel[0].hotelInfo.hotelName);  
+	console.log("lolololo name: " + data.offers.Hotel[0].hotelInfo.hotelName);  
 	res.render('pages/index', {data});
 	})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
