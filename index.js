@@ -4,12 +4,13 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 
 
-var data = "";
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => {
+	var data = "";
 	console.log("+++++++++++++ name: " + req.params.destinationCity);
 	let  apis_url = "https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel";
 	if(req.params.destinationCity)
