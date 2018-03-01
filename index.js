@@ -27,7 +27,7 @@ express()
 			console.log('statusCode is not 200 !' + error);
 		}
     }); 
-	console.log("lolololo name: " + data.offers.Hotel[0].hotelInfo.hotelName);  
+	console.log("lolololo name: " + data);  
 	//res.render('pages/index', {data});
 	res.render('pages/index');
 	})
