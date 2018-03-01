@@ -11,7 +11,6 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => {
 	var data;
-	console.log("+++++++++++++ name: " + req.params.destinationCity);
 	let  apis_url = "https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel";
 	if(req.query.destinationCity)
 		apis_url += "&destinationCity=" + req.query.destinationCity;
@@ -26,7 +25,7 @@ express()
 				console.log('Error parsing JSON!');
 			}
 		} else {
-			//console.log('statusCode is not 200 !' + error);
+			console.log('statusCode is not 200 !' + error);
 		}
     }); 
 	
