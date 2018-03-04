@@ -5,8 +5,7 @@
 </head>
 
 <body>
-  <% 
-  //If (data) {
+  <% if (typeof data == 'object' && data) { 
 	  const hotels = data.offers.Hotel;
 	  hotels.forEach(function(hotel){
   %>
@@ -29,7 +28,7 @@
 </div>
   <%  
 	})
-  //}
+  }
   %>
  <% include ../partials/form.ejs %>
 </body>
