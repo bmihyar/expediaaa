@@ -6,8 +6,9 @@
 
 <body>
   <% 
-  const hotels = data.offers.Hotel;
-  hotels.forEach(function(hotel){
+  If (data) {
+	  const hotels = data.offers.Hotel;
+	  hotels.forEach(function(hotel){
   %>
 <div id="hotels">
 	<div class="hotell">
@@ -27,7 +28,8 @@
 	</div>
 </div>
   <%  
-  })
+	})//hotels.forEach(function(hotel)
+  }//If (data)
   %>
  <% include ../partials/form.ejs %>
 </body>
