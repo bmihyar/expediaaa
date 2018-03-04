@@ -6,7 +6,7 @@
 
 <body>
   <%
-  if (data && typeof data == "object" ){
+  if (typeof data == "object" && data){
 	const hotels = data.offers.Hotel;
 	hotels.forEach(function(hotel){
   %>
