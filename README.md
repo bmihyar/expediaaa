@@ -1,39 +1,27 @@
-# node-js-getting-started
+# Expedia Apis testing
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+This App simulates reading Expedia JSON APIs and building simple UI to show hotels offers
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+This App is using [Express 4](http://expressjs.com/).
+
+Demo for the App is available on Heroku (https://expediaaa.herokuapp.com/)
 
 ## Running Locally
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
+Make sure you have [Node.js](http://nodejs.org/)
 
 ```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
+$ git clone https://github.com/bmihyar/expediaaa.git
+$ cd expediaaa
+$ npm i
 $ npm start
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-## Deploying to Heroku
+## Tesing Expedia APIs
 
-```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
+This App depends on Expedia APIs' availability and the format it returns. You can test this API by running:
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+```sh
+npm test
