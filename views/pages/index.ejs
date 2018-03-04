@@ -5,34 +5,35 @@
 </head>
 
 <body>
-  <% if (typeof data == 'object' && data) { 
-	  const hotels = data.offers.Hotel;
-	  hotels.forEach(function(hotel){
+  <%
+  if (data && typeof data == "object" ){
+	const hotels = data.offers.Hotel;
+	hotels.forEach(function(hotel){
   %>
-<div id="hotels">
-	<div class="hotell">
-		<div id="hotel-image" class="left">
-			<img src="<%= hotel.hotelInfo.hotelImageUrl %>" >
-		</div>
-		<div id="hotel-address" class="middle">
-			<span style="color:#0065b8"><%= hotel.hotelInfo.hotelName %></span><br>
-			<span><%= hotel.hotelInfo.hotelCity %></span><br>
-			<span><%= hotel.hotelInfo.hotelStreetAddress %></span>
-		</div>
-		<div id="hotel-offer" class="right">
-		<span style="text-decoration: line-through; color:red"><%= hotel.hotelPricingInfo.crossOutPriceValue%> <%= hotel.hotelPricingInfo.currency %></span> <span id="deal"><%= hotel.hotelPricingInfo.averagePriceValue %> <%= hotel.hotelPricingInfo.currency %></span>
-		<br>
-		<span>You save <%= hotel.hotelPricingInfo.percentSavings %> %</span>
+	<div id="hotels">
+		<div class="hotell">
+			<div id="hotel-image" class="left">
+				<img src="<%= hotel.hotelInfo.hotelImageUrl %>" >
+			</div>
+			<div id="hotel-address" class="middle">
+				<span style="color:#0065b8"><%= hotel.hotelInfo.hotelName %></span><br>
+				<span><%= hotel.hotelInfo.hotelCity %></span><br>
+				<span><%= hotel.hotelInfo.hotelStreetAddress %></span>
+			</div>
+			<div id="hotel-offer" class="right">
+			<span style="text-decoration: line-through; color:red"><%= hotel.hotelPricingInfo.crossOutPriceValue%> <%= hotel.hotelPricingInfo.currency %></span> <span id="deal"><%= hotel.hotelPricingInfo.averagePriceValue %> <%= hotel.hotelPricingInfo.currency %></span>
+			<br>
+			<span>You save <%= hotel.hotelPricingInfo.percentSavings %> %</span>
+			</div>
 		</div>
 	</div>
-</div>
   <%  
-	}) //hotels.forEach(function(hotel)
-  } else {
+	}) 
   %>
+  <% } else {
   <h2>Sorry !! we are not able to serve your right now, may be you can try another destination </h2>
   <% 
-  }
+	}
   include ../partials/form.ejs 
   %>
 </body>
